@@ -10,10 +10,15 @@ function App() {
     .then((data) => setCountriesAll(data));
 
   return (
-    <div className="container">
-      {countriesAll.map((country) => (
-        <CountryCard country={country} />
-      ))}
+    <div className="main-container">
+      <div className="search-bar">
+        <input type="text" placeholder="Search for a country..."></input>
+      </div>
+      <div className="card-container">
+        {countriesAll.map((country) => (
+          <CountryCard country={country} />
+        ))}
+      </div>
     </div>
   );
 }

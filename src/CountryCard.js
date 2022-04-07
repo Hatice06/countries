@@ -1,7 +1,6 @@
 import React from "react";
 
 function CountryCard({ country }) {
-  console.log(country.flag);
   return (
     <div className="country-card">
       <img src={country.flags.svg} alt="country-flag" />
