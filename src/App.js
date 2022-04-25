@@ -3,7 +3,6 @@ import "./App.css";
 import CountryCard from "./CountryCard";
 import Search from "./Search";
 
-
 function App() {
   const [countriesAll, setCountriesAll] = useState([]);
 
@@ -14,21 +13,18 @@ function App() {
   }, []);
 
   const handleChange = (event) => {
-    console.log(countriesAll);
     const filtered = countriesAll.filter((country) =>
-      country.name.toUpperCase().includes(event.target.value.toLowerCase())
+      country.name.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    console.log(event.target.value);
     setCountriesAll(filtered);
-    console.log(filtered);
   };
 
   return (
     <div className="main-container">
       <Search handleChange={handleChange} />
       <div className="card-container">
-        {countriesAll.map((country) => (
-          <CountryCard country={country} />
+        {countriesAll.map((country, index) => (
+          <CountryCard key={index} country={country} />
         ))}
       </div>
     </div>

@@ -5,14 +5,19 @@ width: 80%;
 
 .card-container {
 display: flex;
+justify-content: center;
 flex-direction: row;
 flex-wrap: wrap;
+color: rgb(123, 5, 25);
+
 
 }
 .country-card {
   border: 1px solid black;
+  border-radius: 10px;
   margin: 25px;
   width: 300px;
+  background-color: rgb(238, 247, 188);
 }
 
 img{
@@ -22,5 +27,15 @@ img{
 
 .country-info {
   padding: 10px;
+}
+
+input {
+  margin: 20px;
+  padding: 10px;
+  width: 250px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+  font-style: italic;
+  background-color: rgb(238, 247, 188); 
 }
 
