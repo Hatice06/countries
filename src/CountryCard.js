@@ -1,22 +1,22 @@
 import React from "react";
 
-function CountryCard({ country }) {
+function CountryCard(props) {
   return (
     <div className="country-card">
-      <img src={country.flag} alt="country-flag" />
+      <img src={props.country.flag} alt="country-flag" />
       <div className="country-info">
-        <h3>{country.name}</h3>
+        <h3>{props.country.name}</h3>
         <p>
           <b>Population:</b>
-          {country.population}
+          {props.country.population}
         </p>
         <p>
           <b>Region:</b>
-          {country.region}
+          {props.country.region}
         </p>
         <p>
           <b>Capital:</b>
-          {country.capital}
+          {props.country.capital}
         </p>
       </div>
     </div>
